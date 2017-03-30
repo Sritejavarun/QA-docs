@@ -1,0 +1,19 @@
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;  
+import junit.textui.TestRunner;
+
+public class TestSuite1 extends TestCase {    
+    public static Test suite() {  
+        TestSuite suite = new TestSuite();  
+
+        suite.addTestSuite(TestCase1.class);
+        //suite.addTestSuite((Case1) Testcase1.newInstance());  
+        //suite.addTestSuite(TestCase1.newInstance());             
+        return suite;  
+    }  
+
+    public static void main(String arg[]) {
+        TestRunner.run(suite());
+    }
+}
